@@ -12,6 +12,7 @@ import cors from "cors";
 
 
 const app = express();
+app.use(cors());
 dotenv.config()
 const PORT = 8000;
 
@@ -26,12 +27,7 @@ const Connect =() =>{
 
 }
 // Middleware
-app.use(
-    cors({
-        credentials: true,
-        origin: "http://localhost:3000",
-    })
-);
+
 
 app.use(cookieParser())
 app.use(express.json())
